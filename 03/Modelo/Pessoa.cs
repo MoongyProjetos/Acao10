@@ -15,5 +15,6 @@ namespace Modelo
 
         public int Idade  => DateTime.Now.Year - DataNascimento.Year;
         public DateTime DataCriacao { get; init; }
+        public string Exemplo{ get; init; }
     }
 }

@@ -15,17 +15,5 @@ namespace Modelo
 
         public int Idade  => DateTime.Now.Year - DataNascimento.Year;
         public DateTime DataCriacao { get; init; }
-
-        public Pessoa()
-        {
-
-        }
-
-        public Pessoa(string nome)
-        {
-            Nome = nome;
-            //this.Nome = nome;
-        }
-
     }
 }

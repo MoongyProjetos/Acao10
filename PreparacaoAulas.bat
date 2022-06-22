@@ -1,3 +1,10 @@
+IF "%1"=="" GOTO Continue
+	git config --global user.name "Jônatas Afonso"
+	git config --global user.email "jonatas_afonso@hotmail.com"
+	git add .
+	git commit -m "Preparacao da Aula %1"
+	git push
+
 	echo 'Criando Pasta de Solucao'
 	mkdir %1
 	cd %1
@@ -8,25 +15,39 @@
 	#dotnet --info #Caso queira ver todas as versões
 
 	echo 'Criacao dos Projetos'
-	dotnet new console -n ConsoleApplication -o ConsoleApplication
-	dotnet new classlib -n LogicaNegocio -o LogicaNegocio 
-	dotnet new classlib -n Modelo -o Modelo 
-	dotnet new webapp -n WebApplication -o WebApplication
-	dotnet new mstest -n Tests -o Tests
+	dotnet new console -n Projeto.ConsoleApp -o Projeto.ConsoleApp
+	dotnet new webapp -n Projeto.WebApp -o Projeto.WebApp
+	dotnet new webapi -n Projeto.WebApi -o Projeto.WebApi
+	dotnet new classlib -n Projeto.LogicaNegocio -o Projeto.LogicaNegocio
+	dotnet new classlib -n Projeto.Modelo -o Projeto.Modelo
+	dotnet new mstest -n Projeto.Tests -o Projeto.Tests
 
 	echo 'Criacao da Solucao'
 	dotnet new sln -n Solucao
-	dotnet sln add ConsoleApplication
-	dotnet sln add WebApplication
-	dotnet sln add LogicaNegocio
-	dotnet sln add Modelo
-	dotnet sln add Tests
-
+	dotnet sln add Projeto.ConsoleApp
+	dotnet sln add Projeto.WebApp
+	dotnet sln add Projeto.WebApi
+	dotnet sln add Projeto.LogicaNegocio
+	dotnet sln add Projeto.Modelo
+	dotnet sln add Projeto.Tests
+	
+	echo 'Preparacao das dependencias'
+	dotnet add Projeto.LogicaNegocio/Projeto.LogicaNegocio.csproj reference Projeto.Modelo/Projeto.Modelo.csproj
+	dotnet add Projeto.ConsoleApp/Projeto.ConsoleApp.csproj reference Projeto.LogicaNegocio/Projeto.LogicaNegocio.csproj
+	dotnet add Projeto.WebApi/Projeto.WebApi.csproj reference Projeto.LogicaNegocio/Projeto.LogicaNegocio.csproj
+	
 	echo 'Preparacao dos Testes'
-	dotnet add ConsoleApp/ConsoleApplication.csproj reference  LogicaNegocio/LogicaNegocio.csproj
-	dotnet add Tests/Tests.csproj reference LogicaNegocio/LogicaNegocio.csproj
+	dotnet add Projeto.Tests/Projeto.Tests.csproj reference Projeto.LogicaNegocio/Projeto.LogicaNegocio.csproj
 
 	echo 'Validacao do Preparo'
 	dotnet restore
 	dotnet build
 	dotnet test
+:Continue
+echo 'Favor informar o nome da pasta'	
+cd ..
+git add .
+git commit -m "Aula %1 Iniciada"
+git push	
+
+cd %1

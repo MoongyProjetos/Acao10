@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogicaNegocio", "LogicaNego
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modelo", "Modelo\Modelo.csproj", "{4E685D51-8CF4-4424-AC0D-A7E183692EB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication", "ConsoleApplication\ConsoleApplication.csproj", "{74435827-CA8B-49D1-A3DE-6461BC91C13C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApplication", "ConsoleApplication\ConsoleApplication.csproj", "{74435827-CA8B-49D1-A3DE-6461BC91C13C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicacaoWeb", "AplicacaoWeb\AplicacaoWeb.csproj", "{A25DD9B8-AE1C-4E25-9D91-FD789309F625}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AplicacaoWeb", "AplicacaoWeb\AplicacaoWeb.csproj", "{A25DD9B8-AE1C-4E25-9D91-FD789309F625}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{088C4BAC-B37F-4833-B864-6A57EB9F4B61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{A25DD9B8-AE1C-4E25-9D91-FD789309F625}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A25DD9B8-AE1C-4E25-9D91-FD789309F625}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A25DD9B8-AE1C-4E25-9D91-FD789309F625}.Release|Any CPU.Build.0 = Release|Any CPU
+		{088C4BAC-B37F-4833-B864-6A57EB9F4B61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{088C4BAC-B37F-4833-B864-6A57EB9F4B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{088C4BAC-B37F-4833-B864-6A57EB9F4B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{088C4BAC-B37F-4833-B864-6A57EB9F4B61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

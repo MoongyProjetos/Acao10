@@ -1,9 +1,45 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using LogicaNegocio;
 using Modelo;
+using Modelo.Repositorio;
 using System.Collections;
 
 
 Console.WriteLine("Hello, World!");
+Aluno.WriteLine("Hello, World!");
+
+
+Documento.ValidarNif("123456789");
+
+
+
+
+
+
+
+//Exemplo Modificador de Acesso
+var pedrinho = new Aluno();
+pedrinho.CodigoAluno = 10;
+//pedrinho.Nota = 10;
+//pedrinho.CampoProtegido = "";
+//pedrinho.PropriedadeIniciadaNoConstrutor = "";
+
+
+
+Aluno tiaguinho = new Aluno();
+tiaguinho.CodigoAluno = 11;
+
+
+var alice = new Aluno
+{
+    CodigoAluno = 10,
+    DataCriacao = new DateTime(2019, 10, 10)
+};
+
+
+var aline = new Aluno("Aline");
+
+
 
 
 

@@ -14,8 +14,9 @@ namespace Modelo
         public List<Aluno> Alunos { get; set; }
 
 
-        private Aluno[] AlunosArray { get; set; } //Tamanho Fixo = Pode ser usado quando especifico o número de lugares numa sala
-        private ArrayList ObjetosArrayList { get; set; } //Cuidado!! Lista que aceita qualquer tipo de objeto
+        public Aluno[] AlunosArray { get; set; } //Tamanho Fixo = Pode ser usado quando especifico o número de lugares numa sala
+        public ArrayList ObjetosArrayList { get; set; } //Cuidado!! Lista que aceita qualquer tipo de objeto
+        public List<Aluno> AlunosLista { get; set; }
 
     }
 }

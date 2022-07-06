@@ -1,0 +1,17 @@
+SQLServer 
+Postgres
+ORACLE DBMS
+MySQL
+MariaDB
+DB2
+Interbase
+Firebird
+...
+
+- Relacionais
+- SQL - Structured Query Language - 
+- Select * from pessoas
+- Select top 10 * from pessoas 
+- Select * from pessoas where rowno <= 10
+- Select * from pessoas fetch first 10 rows only
+

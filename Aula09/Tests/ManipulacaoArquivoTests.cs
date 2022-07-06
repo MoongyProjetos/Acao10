@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
+using System.Diagnostics;
 using System.Globalization;
 using System.Text;
 
@@ -272,6 +273,54 @@ namespace Tests
             }
         }
 
+
+        [TestMethod]
+        public void ExemploStreamFileTest()
+        {
+            //arrange
+            var caminho = @"c:\temp\arquivo.txt";
+
+            //act
+            var inicio = DateTime.Now;
+            using (FileStream arquivo = new FileStream(caminho, FileMode.OpenOrCreate))
+            {
+                for (int i = 0; i < 1000000; i++)
+                {
+                    byte[] messageByte = Encoding.ASCII.GetBytes("\nHere is some data." + i);
+                    arquivo.Write(messageByte);
+                }
+                arquivo.Flush();
+            }
+            var final = DateTime.Now;
+            var diferenca = final - inicio;
+            Debug.WriteLine(diferenca);
+
+            //assert
+
+        }
+
+
+
+        [TestMethod]
+        public void ExemploOpenFileNormalTest()
+        {
+            //arrange
+            var caminho = @"c:\temp\arquivo.txt";
+
+            //act
+            var inicio = DateTime.Now;
+
+            for (int i = 0; i < 10000; i++)
+            {
+                File.AppendAllText(caminho, "\nHere is some data." + i);
+            }
+            var final = DateTime.Now;
+            var diferenca = final - inicio;
+            Debug.WriteLine(diferenca);
+
+            //assert
+
+        }
 
     }
 }

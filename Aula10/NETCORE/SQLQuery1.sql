@@ -1,0 +1,1 @@
+﻿Insert into MeuDatabaseExemplo (Id, Nome) values (1, 'Joao')

@@ -1,0 +1,13 @@
+Biblioteca - DLL/JS (JQUERY)
+API    - DirectX (APIs 3D, APIs joysticks, API sound)
+WEBAPI -  REST/SOAP
+Framework
+	.NET Framework ()
+	EntityFramework
+	
+	
+	ORM - Object Relationship Mapping
+	
+Pessoas.Add(new Pessoa("Joaoa"));
+Pessoas.Save();
+

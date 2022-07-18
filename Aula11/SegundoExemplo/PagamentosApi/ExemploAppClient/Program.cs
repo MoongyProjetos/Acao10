@@ -14,7 +14,7 @@ var response = client.GetAsync(client.BaseAddress).Result;
 var json = response.Content.ReadAsStringAsync().Result;
 
 
-var pagamentos = JsonSerializer.Deserialize<List<Pagamento>>(json)!;
+var pagamentos = JsonSerializer.Deserialize<List<Pagamento>>(json);
 
 
 Console.WriteLine(json);

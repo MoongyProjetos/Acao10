@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagamentosApi", "PagamentosApi\PagamentosApi.csproj", "{3D453C29-625C-48D5-B22A-C24B8702C49F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExemploAppClient", "ExemploAppClient\ExemploAppClient.csproj", "{97D90F1D-EC8F-4689-BC59-4AD82FB9DF8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D453C29-625C-48D5-B22A-C24B8702C49F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D453C29-625C-48D5-B22A-C24B8702C49F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D453C29-625C-48D5-B22A-C24B8702C49F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D453C29-625C-48D5-B22A-C24B8702C49F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97D90F1D-EC8F-4689-BC59-4AD82FB9DF8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97D90F1D-EC8F-4689-BC59-4AD82FB9DF8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97D90F1D-EC8F-4689-BC59-4AD82FB9DF8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97D90F1D-EC8F-4689-BC59-4AD82FB9DF8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {711398C5-E03A-424C-BD07-3EF26959DA45}
+	EndGlobalSection
+EndGlobal

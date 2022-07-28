@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -78,6 +79,31 @@ namespace ProgramacaoAssincrona
             Thread.Sleep(2000);
             var listaPessoas = new List<PessoaDTO>();
             return listaPessoas;
+        }
+
+
+
+
+        public static ConcurrentQueue<string> queue = new ConcurrentQueue<string>();
+
+
+       public static void PlaceOrders()
+        {
+            for (int i = 1; i <= 100; i++)
+            {
+                Thread.Sleep(250);
+                String order = String.Format("Order {0}", i);
+                queue.Enqueue(order);
+                Console.WriteLine("Added {0}", order);
+            }
+        }
+        public static void ProcessOrders()
+        {
+            while (true) //continue indefinitely
+                if (queue.TryDequeue(out string order))
+                {
+                    Console.WriteLine("Processed {0}", order);
+                }
         }
 
         #endregion Metodos Assícronos execuçao em tasks / threads separadas
